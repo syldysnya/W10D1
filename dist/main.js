@@ -13,9 +13,9 @@
 /*!************************************!*\
   !*** ./src/dom_node_collection.js ***!
   \************************************/
-/***/ ((module) => {
+/***/ (() => {
 
-eval("class DOMNodeCollection {\n    constructor(arr) {\n        this.arr = arr\n    }\n}\n\nmodule.exports = DOMNodeCollection;\n\n//# sourceURL=webpack:///./src/dom_node_collection.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (38:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| // }\\n| \\n> module.exports = DOMNodeCollection;\");\n\n//# sourceURL=webpack:///./src/dom_node_collection.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("class DOMNodeCollection {\n    constructor(arr) {\n        this.arr = arr\
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const DOMNodeCollection = __webpack_require__(/*! ./dom_node_collection.js */ \"./src/dom_node_collection.js\");\n\nwindow.$l = function(arg) {\n    if (typeof arg === 'string') {\n        let nodeList = document.querySelectorAll(arg);\n        let arrNodeList = Array.prototype.slice.call(nodeList);\n        return new DOMNodeCollection(arrNodeList);\n    } else if (typeof arg === 'HTMLElement') {\n        return new DOMNodeCollection([arg]);\n    }\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const DOMNodeCollection = __webpack_require__(/*! ./dom_node_collection.js */ \"./src/dom_node_collection.js\");\n\nwindow.$l = function(arg) {\n    if (typeof arg === 'string') {\n        let nodeList = document.querySelectorAll(arg);\n        let arrNodeList = Array.prototype.slice.call(nodeList);\n        return new DOMNodeCollection(arrNodeList);\n    } else if (arg instanceof HTMLElement) {\n        return new DOMNodeCollection([arg]);\n    }\n}\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

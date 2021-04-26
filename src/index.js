@@ -5,7 +5,7 @@ window.$l = function(arg) {
         let nodeList = document.querySelectorAll(arg);
         let arrNodeList = Array.prototype.slice.call(nodeList);
         return new DOMNodeCollection(arrNodeList);
-    } else if (typeof arg === 'HTMLElement') {
+    } else if (arg instanceof HTMLElement) {
         return new DOMNodeCollection([arg]);
     }
 }
