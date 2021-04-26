@@ -38,6 +38,11 @@ class DOMNodeCollection {
         })
     }
 
+
+    children(){
+        
+    }
+
     
 
 }
